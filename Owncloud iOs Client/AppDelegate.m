@@ -60,6 +60,7 @@
 #import "PresentedViewUtils.h"
 #import "OCLoadingSpinner.h"
 #import "OCOAuth2Configuration.h"
+#import "DeviceManager.h"
 
 NSString * CloseAlertViewWhenApplicationDidEnterBackground = @"CloseAlertViewWhenApplicationDidEnterBackground";
 NSString * RefreshSharesItemsAfterCheckServerVersion = @"RefreshSharesItemsAfterCheckServerVersion";
@@ -221,6 +222,7 @@ float shortDelay = 0.3;
                                 authorizationEndpoint:k_oauth2_authorization_endpoint
                                 tokenEndpoint:k_oauth2_token_endpoint];
 
+    [[DeviceManager sharedManager] start:nil];
     return YES;
 }
 

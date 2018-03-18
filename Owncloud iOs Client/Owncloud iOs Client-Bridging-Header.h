@@ -52,4 +52,7 @@
 #import "DetectUserData.h"
 #import "UtilsNotifications.h"
 
+#import "DeviceChooseViewController.h"
+#import "DeviceManager.h"
+#import "Device.h"
 

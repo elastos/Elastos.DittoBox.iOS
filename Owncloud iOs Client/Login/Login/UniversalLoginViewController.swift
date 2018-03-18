@@ -59,6 +59,7 @@ public enum TextfieldType: String {
     @IBOutlet var imageViewLeftURL: UIImageView!
     @IBOutlet var textFieldURL: UITextField!
     @IBOutlet var buttonReconnection: UIButton!
+    @IBOutlet weak var buttonChooseDevice: UIButton!
     
     @IBOutlet var buttonReconnectionURL: UIButton!
     @IBOutlet var imageViewURLFooter: UIImageView!
@@ -108,6 +109,10 @@ public enum TextfieldType: String {
     
     private let oAuth2Manager: OCOAuth2Manager = OCOAuth2Manager()
 
+    deinit {
+        DeviceManager.shared().removeObserver(self, forKeyPath: "currentDevice")
+        NotificationCenter.default.removeObserver(self)
+    }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -124,7 +129,7 @@ public enum TextfieldType: String {
             // ManageNetworkErrors.returnErrorMessageWithHttpStatusCode when appropriate, and will show
             // the message without a callback to a delegate method
         
-        textFieldURL.delegate = self
+        //textFieldURL.delegate = self
         textFieldUsername.delegate = self
         textFieldPassword.delegate = self
         
@@ -132,8 +137,8 @@ public enum TextfieldType: String {
         self.showInitMessageCredentialsErrorIfNeeded()
 
         let enabledEditUrlUsernamePassword : Bool = (self.loginMode == .create || self.loginMode == .migrate)
-        self.textFieldURL.isEnabled = enabledEditUrlUsernamePassword
-        self.textFieldURL.isUserInteractionEnabled = enabledEditUrlUsernamePassword
+        //self.textFieldURL.isEnabled = enabledEditUrlUsernamePassword
+        //self.textFieldURL.isUserInteractionEnabled = enabledEditUrlUsernamePassword
         self.textFieldUsername.isEnabled = enabledEditUrlUsernamePassword
         self.textFieldUsername.isUserInteractionEnabled = enabledEditUrlUsernamePassword
 
@@ -152,6 +157,38 @@ public enum TextfieldType: String {
         UtilsCookies.saveCurrentOfActiveUserAndClean()    // network requests from log-in view need to be independent of existing sessions
         
         print("Init login with loginMode: \(loginMode.rawValue) (0=Create,1=Update,2=Expire,3=Migrate)")
+        
+        DeviceManager.shared().addObserver(self, forKeyPath: "currentDevice", options: [.new], context: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(UniversalLoginViewController.deviceConnected(_:)), name: NSNotification.Name(rawValue: kNotificationDeviceConnected), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(UniversalLoginViewController.deviceConnectFailed(_:)), name: NSNotification.Name(rawValue: kNotificationDeviceConnectFailed), object: nil)
+    }
+    
+    public override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if (keyPath == "currentDevice") {
+            DispatchQueue.main.async {
+                if let device = DeviceManager.shared().currentDevice {
+                    self.textFieldURL.text = device.deviceName;
+                }
+                else {
+                    self.textFieldURL.text = nil;
+                }
+            }
+        }
+    }
+    
+    func deviceConnected(_ notification: Notification) {
+        DispatchQueue.main.async {
+            self.textFieldDidEndEditing(self.textFieldURL);
+        }
+    }
+    
+    func deviceConnectFailed(_ notification: Notification) {
+        DispatchQueue.main.async {
+            self.imageViewURLFooter.image = UIImage(named: "CredentialsError.png")!
+            self.labelURLFooter.text = NSLocalizedString("设备连接失败", comment: "")
+            self.setReconnectionButtons(hiddenStatus: false)
+            self.setConnectButton(status: false)
+        }
     }
     
     public override func viewWillDisappear(_ animated: Bool) {
@@ -385,7 +422,7 @@ public enum TextfieldType: String {
         
         
         //Placeholders for the login textfields
-        self.textFieldURL.placeholder = NSLocalizedString("url_sample", comment: "")
+        //self.textFieldURL.placeholder = NSLocalizedString("url_sample", comment: "")
         self.textFieldUsername.placeholder = NSLocalizedString("username", comment: "")
         self.textFieldPassword.placeholder = NSLocalizedString("password", comment: "")
         
@@ -761,6 +798,11 @@ public enum TextfieldType: String {
     @IBAction func reconnectionButtonTapped(_ sender: Any) {
         self.dismissKeyboard()
         self.checkCurrentUrl()
+    }
+    
+    @IBAction func chooseDeviceButtonTapped(_ sender: Any) {
+        let deviceChooseViewController: DeviceChooseViewController = DeviceChooseViewController()
+        deviceChooseViewController.navigate(from: self)
     }
     
     @IBAction func connectButtonTapped(_ sender: Any) {

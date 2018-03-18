@@ -110,6 +110,8 @@ typedef void (^MBProgressHUDCompletionBlock)();
  */
 @interface MBProgressHUD : UIView
 
++ (MB_INSTANCETYPE)showToast:(NSString *)test inView:(UIView *)view duration:(NSTimeInterval)duration animated:(BOOL)animated;
+
 /**
  * Creates a new HUD, adds it to provided view and shows it. The counterpart to this method is hideHUDForView:animated:.
  * 

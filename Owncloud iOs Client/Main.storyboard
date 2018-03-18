@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -109,7 +110,7 @@
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EnR-aJ-yK2" userLabel="URLStackView">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ClM-Qn-WHD">
                                                         <rect key="frame" x="0.0" y="41" width="382" height="25"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="server.png" translatesAutoresizingMaskIntoConstraints="NO" id="kbb-33-8tT" userLabel="Image View Left URL">
@@ -119,28 +120,48 @@
                                                                     <constraint firstAttribute="height" constant="25" id="Tw5-wu-tEO"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" restorationIdentifier="url" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K3Y-mX-EWx" userLabel="Text Field URL">
-                                                                <rect key="frame" x="33" y="0.0" width="316" height="25"/>
+                                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" restorationIdentifier="url" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K3Y-mX-EWx" userLabel="Text Field URL">
+                                                                <rect key="frame" x="33" y="-2.3333333333333144" width="349" height="30"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                             </textField>
                                                             <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSw-Lz-XIR" userLabel="Button Reconnection">
-                                                                <rect key="frame" x="357" y="0.0" width="25" height="25"/>
+                                                                <rect key="frame" x="320" y="1.6666666666666856" width="22" height="22"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="25" id="d2d-vw-fSp"/>
-                                                                    <constraint firstAttribute="width" constant="25" id="uI9-CC-Mzh"/>
+                                                                    <constraint firstAttribute="height" constant="22" id="2ei-UO-TUZ"/>
+                                                                    <constraint firstAttribute="width" constant="22" id="u02-fe-CNv"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button" image="ReconnectIcon.png"/>
                                                                 <connections>
                                                                     <action selector="reconnectionButtonTapped:" destination="iPx-pb-eEh" eventType="touchUpInside" id="JwI-o5-N9T"/>
                                                                 </connections>
                                                             </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0C-WB-Vmh">
+                                                                <rect key="frame" x="358" y="4" width="16" height="16"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="16" id="5FR-Qy-LCg"/>
+                                                                    <constraint firstAttribute="height" constant="16" id="Cju-af-4X4"/>
+                                                                </constraints>
+                                                                <state key="normal" image="forward"/>
+                                                                <connections>
+                                                                    <action selector="chooseDeviceButtonTapped:" destination="iPx-pb-eEh" eventType="touchUpInside" id="4uD-1q-4Bl"/>
+                                                                </connections>
+                                                            </button>
                                                         </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstItem="eSw-Lz-XIR" firstAttribute="leading" secondItem="K3Y-mX-EWx" secondAttribute="trailing" constant="8" id="kNi-X2-HYy"/>
+                                                            <constraint firstAttribute="trailing" secondItem="K3Y-mX-EWx" secondAttribute="trailing" id="35p-EA-075"/>
+                                                            <constraint firstItem="K3Y-mX-EWx" firstAttribute="leading" secondItem="kbb-33-8tT" secondAttribute="trailing" constant="8" id="5rt-ZF-DXT"/>
+                                                            <constraint firstItem="kbb-33-8tT" firstAttribute="centerY" secondItem="ClM-Qn-WHD" secondAttribute="centerY" id="FF3-kZ-pKm"/>
+                                                            <constraint firstItem="O0C-WB-Vmh" firstAttribute="centerY" secondItem="ClM-Qn-WHD" secondAttribute="centerY" id="RZh-rA-m1V"/>
+                                                            <constraint firstAttribute="trailing" secondItem="O0C-WB-Vmh" secondAttribute="trailing" constant="8" id="WQi-84-3ow"/>
+                                                            <constraint firstItem="kbb-33-8tT" firstAttribute="leading" secondItem="ClM-Qn-WHD" secondAttribute="leading" id="fUx-l4-oGm"/>
+                                                            <constraint firstItem="eSw-Lz-XIR" firstAttribute="centerY" secondItem="ClM-Qn-WHD" secondAttribute="centerY" id="oci-sE-A3J"/>
+                                                            <constraint firstItem="O0C-WB-Vmh" firstAttribute="leading" secondItem="eSw-Lz-XIR" secondAttribute="trailing" constant="16" id="vy4-Rq-f9I"/>
+                                                            <constraint firstItem="K3Y-mX-EWx" firstAttribute="centerY" secondItem="ClM-Qn-WHD" secondAttribute="centerY" id="waV-p7-ons"/>
                                                         </constraints>
-                                                    </stackView>
+                                                    </view>
                                                     <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cOi-fS-vwf" userLabel="URLInfoStackView">
                                                         <rect key="frame" x="0.0" y="82" width="382" height="25"/>
                                                         <subviews>
@@ -169,13 +190,13 @@
                                                                 </constraints>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="0NZ-MO-sTX" userLabel="Label URL Footer">
-                                                                <rect key="frame" x="33" y="0.0" width="316" height="25"/>
+                                                                <rect key="frame" x="33" y="0.0" width="349" height="25"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUS-Qc-A5N" userLabel="Button Reconnection">
-                                                                <rect key="frame" x="357" y="0.0" width="25" height="25"/>
+                                                                <rect key="frame" x="382" y="0.0" width="25" height="25"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="g7S-dq-MGB"/>
                                                                     <constraint firstAttribute="width" constant="25" id="qNr-gK-AbW"/>
@@ -216,7 +237,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" restorationIdentifier="password" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3io-Sx-qiv" userLabel="Text Field Password">
-                                                                <rect key="frame" x="33" y="0.0" width="316" height="25"/>
+                                                                <rect key="frame" x="33" y="0.0" width="349" height="25"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -225,7 +246,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BR8-xb-EG9">
-                                                                <rect key="frame" x="357" y="0.0" width="25" height="25"/>
+                                                                <rect key="frame" x="382" y="0.0" width="25" height="25"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="25" id="ccj-FV-NUm"/>
                                                                     <constraint firstAttribute="height" constant="25" id="ojW-d0-sXL"/>
@@ -282,10 +303,10 @@
                                                 <constraints>
                                                     <constraint firstItem="wsI-KP-W6G" firstAttribute="width" secondItem="yIK-Tu-q6d" secondAttribute="width" id="506-dZ-atv"/>
                                                     <constraint firstItem="cOi-fS-vwf" firstAttribute="width" secondItem="yIK-Tu-q6d" secondAttribute="width" id="56u-Ip-oQ5"/>
-                                                    <constraint firstItem="EnR-aJ-yK2" firstAttribute="width" secondItem="yIK-Tu-q6d" secondAttribute="width" id="C4X-0E-Kcq"/>
                                                     <constraint firstItem="g4K-Wc-Pa1" firstAttribute="width" secondItem="yIK-Tu-q6d" secondAttribute="width" id="UF0-w7-7Mr"/>
                                                     <constraint firstItem="HZa-qF-5hC" firstAttribute="width" secondItem="yIK-Tu-q6d" secondAttribute="width" id="gGt-YV-agI"/>
                                                     <constraint firstItem="kY0-Md-FsP" firstAttribute="width" secondItem="yIK-Tu-q6d" secondAttribute="width" id="hkZ-cF-43v"/>
+                                                    <constraint firstItem="ClM-Qn-WHD" firstAttribute="width" secondItem="yIK-Tu-q6d" secondAttribute="width" id="otd-yH-pkD"/>
                                                     <constraint firstItem="VCQ-68-5UF" firstAttribute="width" secondItem="yIK-Tu-q6d" secondAttribute="width" id="rfs-ac-4Bx"/>
                                                     <constraint firstItem="2BO-Lb-oZ2" firstAttribute="width" secondItem="yIK-Tu-q6d" secondAttribute="width" id="ukJ-z7-flU"/>
                                                 </constraints>
@@ -347,6 +368,7 @@
                     <connections>
                         <outlet property="activityIndicatorURLFooter" destination="Gsa-2t-LAX" id="oka-F4-vPh"/>
                         <outlet property="basicAuthInfoStackView" destination="kY0-Md-FsP" id="6kU-lP-WEK"/>
+                        <outlet property="buttonChooseDevice" destination="O0C-WB-Vmh" id="gtp-sB-mJk"/>
                         <outlet property="buttonConnect" destination="qcz-FW-RTp" id="lkF-6G-Pnj"/>
                         <outlet property="buttonHelpLink" destination="lUz-8C-zKg" id="gnX-eE-ywn"/>
                         <outlet property="buttonReconnection" destination="HUS-Qc-A5N" id="c26-Ww-cpG"/>
@@ -371,7 +393,6 @@
                         <outlet property="textFieldUsername" destination="L65-Zl-2qP" id="gQL-J4-iaP"/>
                         <outlet property="topInfoStackView" destination="HZa-qF-5hC" id="bRd-Pu-Xrm"/>
                         <outlet property="urlInfoStackView" destination="cOi-fS-vwf" id="JYO-mt-fcA"/>
-                        <outlet property="urlStackView" destination="EnR-aJ-yK2" id="9NE-n3-QCd"/>
                         <outlet property="usernameStackView" destination="wsI-KP-W6G" id="d7c-AU-H12"/>
                         <outlet property="viewTopLogo" destination="p60-u6-Ys0" id="e1N-cO-hqr"/>
                         <segue destination="T7Q-cG-tn1" kind="presentation" identifier="segueToWebLoginView" id="S2O-4z-eW2"/>
@@ -430,7 +451,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T7Q-cG-tn1" customClass="OCNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="o9e-Ar-I5G">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -446,6 +467,7 @@
     <resources>
         <image name="CompanyLogo.png" width="300" height="200"/>
         <image name="ReconnectIcon.png" width="25" height="25"/>
+        <image name="forward" width="16" height="16"/>
         <image name="password.png" width="25" height="25"/>
         <image name="server.png" width="25" height="25"/>
         <image name="user.png" width="25" height="25"/>

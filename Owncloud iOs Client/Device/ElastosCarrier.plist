@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>udp_enabled</key>
+	<false/>
+	<key>Bootstraps</key>
+	<array>
+		<dict>
+			<key>ipv4</key>
+			<string>13.58.208.50</string>
+			<key>port</key>
+			<string>33445</string>
+			<key>public_key</key>
+			<string>89vny8MrKdDKs7Uta9RdVmspPjnRMdwMmaiEW27pZ7gh</string>
+		</dict>
+		<dict>
+			<key>ipv4</key>
+			<string>18.216.102.47</string>
+			<key>port</key>
+			<string>33445</string>
+			<key>public_key</key>
+			<string>G5z8MqiNDFTadFUPfMdYsYtkUDbX5mNCMVHMZtsCnFeb</string>
+		</dict>
+		<dict>
+			<key>ipv4</key>
+			<string>18.216.6.197</string>
+			<key>port</key>
+			<string>33445</string>
+			<key>public_key</key>
+			<string>H8sqhRrQuJZ6iLtP2wanxt4LzdNrN2NNFnpPdq1uJ9n2</string>
+		</dict>
+		<dict>
+			<key>ipv4</key>
+			<string>54.223.36.193</string>
+			<key>port</key>
+			<string>33445</string>
+			<key>public_key</key>
+			<string>5tuHgK1Q4CYf4K5PutsEPK5E3Z7cbtEBdx7LwmdzqXHL</string>
+		</dict>
+		<dict>
+			<key>ipv4</key>
+			<string>52.80.187.125</string>
+			<key>port</key>
+			<string>33445</string>
+			<key>public_key</key>
+			<string>3khtxZo89SBScAMaHhTvD68pPHiKxgZT6hTCSZZVgNEm</string>
+		</dict>
+	</array>
+</dict>
+</plist>

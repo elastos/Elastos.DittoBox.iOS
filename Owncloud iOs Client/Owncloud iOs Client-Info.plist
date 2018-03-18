@@ -146,5 +146,7 @@
 	<string>Used to instantly upload your new photos after a significant change in your location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Used to instantly upload your new photos after a significant change in your location</string>
+	<key>NSCameraUsageDescription</key>
+	<string>用于扫描二维码</string>
 </dict>
 </plist>
