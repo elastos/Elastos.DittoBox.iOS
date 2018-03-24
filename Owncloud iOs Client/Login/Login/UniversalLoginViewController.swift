@@ -185,7 +185,7 @@ public enum TextfieldType: String {
     func deviceConnectFailed(_ notification: Notification) {
         DispatchQueue.main.async {
             self.imageViewURLFooter.image = UIImage(named: "CredentialsError.png")!
-            self.labelURLFooter.text = NSLocalizedString("设备连接失败", comment: "")
+            self.labelURLFooter.text = NSLocalizedString("error_too_many_http_redirects", comment: "")
             self.setReconnectionButtons(hiddenStatus: false)
             self.setConnectButton(status: false)
         }
@@ -427,13 +427,14 @@ public enum TextfieldType: String {
         self.textFieldPassword.placeholder = NSLocalizedString("password", comment: "")
         
         //init textField values
-        self.textFieldURL.text = k_default_url_server
+//        self.textFieldURL.text = k_default_url_server
+        self.textFieldURL.text = DeviceManager.shared().currentDevice?.deviceName
         
         if self.loginMode != .create {
             
-            if self.loginMode != .migrate {
-                self.textFieldURL.text = UtilsUrls.getFullRemoteServerPath(self.user)
-            }
+//            if self.loginMode != .migrate {
+//                self.textFieldURL.text = UtilsUrls.getFullRemoteServerPath(self.user)
+//            }
             
             self.textFieldUsername.text = self.user?.username
             self.textFieldPassword.text = ""

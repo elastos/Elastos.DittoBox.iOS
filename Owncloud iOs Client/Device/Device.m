@@ -21,7 +21,7 @@ static NSString * const KEY_LocalPort = @"localPort";
     if (self = [super init]) {
         _deviceInfo = deviceInfo;
         _state = 0;
-        _portForwardingID = -1;
+        _portForwardingID = 0;
         
         NSDictionary *deviceConfig = [[NSUserDefaults standardUserDefaults] objectForKey:self.deviceId];
         if (deviceConfig) {
@@ -112,11 +112,11 @@ static NSString * const KEY_LocalPort = @"localPort";
         if (_stream) {
             NSError *error = nil;
 
-            if (_portForwardingID >= 0) {
+            if (_portForwardingID > 0) {
                 if (![_stream closePortForwarding:_portForwardingID error:&error]) {
                     DLog(@"Close port forwarding error: %@", error);
                 }
-                _portForwardingID = -1;
+                _portForwardingID = 0;
             }
 
             if (![_session removeStream:_stream error:&error]) {
@@ -142,22 +142,14 @@ static NSString * const KEY_LocalPort = @"localPort";
     }
 
     _localPort = localPort;
-
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSMutableDictionary *deviceConfig = [[userDefaults objectForKey:self.deviceId] mutableCopy];
-    if (deviceConfig == nil) {
-        deviceConfig = [NSMutableDictionary dictionaryWithCapacity:1];
-    }
-    deviceConfig[KEY_LocalPort] = @(localPort);
-    [userDefaults setObject:deviceConfig forKey:self.deviceId];
-    [userDefaults synchronize];
+    [self savePort];
     
-    if (_portForwardingID >= 0) {
+    if (_portForwardingID > 0) {
         NSError *error = nil;
         if (![_stream closePortForwarding:_portForwardingID error:&error]) {
             DLog(@"Close port forwarding error: %@", error);
         }
-        _portForwardingID = -1;
+        _portForwardingID = 0;
     }
 
     if (_state == ELACarrierStreamStateConnected) {
@@ -165,13 +157,25 @@ static NSString * const KEY_LocalPort = @"localPort";
     }
 }
 
+- (void)savePort
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSMutableDictionary *deviceConfig = [[userDefaults objectForKey:self.deviceId] mutableCopy];
+    if (deviceConfig == nil) {
+        deviceConfig = [NSMutableDictionary dictionaryWithCapacity:1];
+    }
+    deviceConfig[KEY_LocalPort] = @(_localPort);
+    [userDefaults setObject:deviceConfig forKey:self.deviceId];
+    [userDefaults synchronize];
+}
+
 - (void)sendInviteRequest
 {
     NSError *error = nil;
     if (![_session sendInviteRequestWithResponseHandler:
           ^(ELACarrierSession *session, NSInteger status, NSString *reason, NSString *sdp) {
+              DLog(@"Invite request response, stream state: %zd", _state);
               if (session != _session || _state != ELACarrierStreamStateTransportReady) {
-                  DLog(@"session state: %zd", _state);
                   return;
               }
 
@@ -216,7 +220,8 @@ static NSString * const KEY_LocalPort = @"localPort";
     if (portForwarding) {
         _portForwardingID = portForwarding.integerValue;
         _localPort = localPort;
-        DLog(@"Success to open port forwarding : %d, loacl port : %d", (int)_portForwardingID, localPort);
+        [self savePort];
+        DLog(@"Success to open port forwarding : %zd, loacl port : %d", _portForwardingID, localPort);
         [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationDeviceConnected object:self userInfo:nil];
     }
     else {

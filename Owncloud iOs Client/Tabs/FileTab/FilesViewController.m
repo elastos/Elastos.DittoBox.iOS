@@ -64,6 +64,8 @@
 #import "EditFileViewController.h"
 #import "CheckFeaturesSupported.h"
 
+#import "DeviceManager.h"
+
 //Constant for iOS7
 #define k_status_bar_height 20
 #define k_navigation_bar_height 44
@@ -3323,6 +3325,8 @@
 
     AppDelegate *app = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     [_manageNetworkErrors manageErrorHttp:errorCodeFromServer andErrorConnection:error andUser:app.activeUser];
+    
+    [[DeviceManager sharedManager].currentDevice connect];
 }
 
 /*
