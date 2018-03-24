@@ -103,7 +103,7 @@
     Device *device = [DeviceManager sharedManager].devices[indexPath.row];
     cell.textLabel.text = device.deviceName;
     if (device.localPort > 0) {
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"https://localhost:%d", device.localPort];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"http://localhost:%d", device.localPort];
     }
     if (device == [DeviceManager sharedManager].currentDevice) {
         cell.imageView.image = [UIImage imageNamed:@"select"];

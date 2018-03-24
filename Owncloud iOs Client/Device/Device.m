@@ -171,6 +171,7 @@ static NSString * const KEY_LocalPort = @"localPort";
     if (![_session sendInviteRequestWithResponseHandler:
           ^(ELACarrierSession *session, NSInteger status, NSString *reason, NSString *sdp) {
               if (session != _session || _state != ELACarrierStreamStateTransportReady) {
+                  DLog(@"session state: %zd", _state);
                   return;
               }
 

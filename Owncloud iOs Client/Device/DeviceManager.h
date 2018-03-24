@@ -3,6 +3,7 @@
 #import "Device.h"
 
 #define kNotificationDeviceListUpdated      @"kNotificationDeviceListUpdated"
+#define kNotificationSelfDisconncted        @"kNotificationSelfDisconncted"
 #define kNotificationSelfInfoUpdated        @"kNotificationSelfInfoUpdated"
 
 @interface DeviceManager : NSObject

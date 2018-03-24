@@ -166,6 +166,10 @@ static NSString * const KEY_CurrentDeviceId = @"currentDeviceIdentifier";
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
     else if (device != currentDevice && [devices containsObject:device]) {
+        if (currentDevice) {
+            [currentDevice disconnect];
+        }
+        
         currentDevice = device;
         [[NSUserDefaults standardUserDefaults] setObject:device.deviceId forKey:KEY_CurrentDeviceId];
         [[NSUserDefaults standardUserDefaults] synchronize];
@@ -222,14 +226,15 @@ static NSString * const KEY_CurrentDeviceId = @"currentDeviceIdentifier";
     connectStatus = newStatus;
 
     if (connectStatus == ELACarrierConnectionStatusDisconnected) {
+        
         for (Device *device in devices) {
             [device disconnect];
         }
 
-        [devices removeAllObjects];
-        currentDevice = nil;
+//        [devices removeAllObjects];
+//        currentDevice = nil;
 
-        [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationDeviceListUpdated object:nil userInfo:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationSelfDisconncted object:nil userInfo:nil];
 
         if ([UIApplication sharedApplication].applicationState == UIApplicationStateActive) {
             dispatch_async(dispatch_get_main_queue(), ^{

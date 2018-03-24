@@ -476,7 +476,7 @@ public enum TextfieldType: String {
     }
     
     func updateUIWithNormalizedData(_ oNormalized: ServerURLNormalizer) {
-        self.textFieldURL.text = self.validatedServerURL
+        //self.textFieldURL.text = self.validatedServerURL
         if (oNormalized.user != nil) && !(oNormalized.user?.isEmpty)! {
             self.textFieldUsername.text = oNormalized.user
         }
@@ -541,7 +541,8 @@ public enum TextfieldType: String {
         self.setConnectButton(status: false)
         self.setURLFooter(isType: .TestingConnection)
         
-        if let inputURL = textFieldURL.text {
+        if let device = DeviceManager.shared().currentDevice {
+            let inputURL = "http://localhost:\(device.localPort)"
             self.serverURLNormalizer.normalize(serverURL: inputURL)
             self.setNetworkActivityIndicator(status: true)
             // get public infor from server
@@ -797,7 +798,11 @@ public enum TextfieldType: String {
 // MARK: IBActions
     @IBAction func reconnectionButtonTapped(_ sender: Any) {
         self.dismissKeyboard()
-        self.checkCurrentUrl()
+        if let device = DeviceManager.shared().currentDevice {
+            if device.connect() {
+                self.checkCurrentUrl()
+            }
+        }
     }
     
     @IBAction func chooseDeviceButtonTapped(_ sender: Any) {
