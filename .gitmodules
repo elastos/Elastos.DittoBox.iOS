@@ -5,6 +5,3 @@
 	path = user_manual/ocdoc
 	url = https://github.com/owncloud/documentation
 	branch = master
-[submodule "user_manual/ocdoc"]
-	path = user_manual/ocdoc
-	url = https://github.com/owncloud/documentation
