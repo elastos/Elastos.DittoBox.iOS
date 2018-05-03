@@ -50,7 +50,7 @@ https://github.com:elastos/Elastos.PersonalCloudDrive.Service
 
 After build and installation of ElaDrive on iOS, you need to scan QRcode of ElaDriver agent address to pair at first. When pairing server succeeded, then you can use ownCloud to access and save files as origin ownCloud does.
 
-Beaware, due to carrier is decentralized network, there would be a moment about 5~30s for ElaDriver app completely connected to carrier network and get new added friend connected.
+Beaware, due to carrier is decentralized network, there would be a moment about 5~30s for ElaDriver app to get completely connected to carrier network and get friends connected (or online).
 
 ## Thanks
 
