@@ -7,9 +7,9 @@ Elastos personal cloud drive (ElaDrive) is a demo application integrating ownClo
 
 ## Highlights
 
-This app demonstrates that all traditional http(/https)-based application can be refactored to elastos carrier apps running over carrier network. Being elastos carrier web app, the app server can be deployed without the limit of direct network accessible.
+This app demonstrates that all traditional http(/https)-based application can be refactored to elastos carrier apps running over carrier network. Being elastos carrier web app, the app server can be deployed without requirement of direct network accessibiblity.
 
-For example, through elastos carrier network, you can deploy ownCloud server at local network at your home, and access ownCloud service at anywhere.
+For example, through elastos carrier network, you can deploy ownCloud server in local network at your home, and access ownCloud service at anywhere.
 
 ## Build from source
 
@@ -50,11 +50,11 @@ https://github.com:elastos/Elastos.PersonalCloudDrive.Service
 
 After build and installation of ElaDrive on iOS, you need to scan QRcode of ElaDriver agent address to pair at first. When pairing server succeeded, then you can use ownCloud to access and save files as origin ownCloud does.
 
-Notice: Due to carrier is decentralized network, there would be a moment about 5~30s for ElaDriver app completely connected to carrier network.
+Beaware, due to carrier is decentralized network, there would be a moment about 5~30s for ElaDriver app completely connected to carrier network and get new added friend connected.
 
 ## Thanks
 
-All works bases on ownCloud and elastos carrier Android SDK. Thanks to ownCloud team (especially) and carrier team.
+All works base on ownCloud and elastos carrier iOS SDK. Thanks to ownCloud team (especially) and carrier team.
 
 ## License
 
