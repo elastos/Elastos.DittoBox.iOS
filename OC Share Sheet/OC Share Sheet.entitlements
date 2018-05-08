@@ -8,7 +8,7 @@
 	</array>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)group.com.owncloud.iOSmobileapp</string>
+		<string>$(AppIdentifierPrefix)group.org.elastos.iOSdittoBoxapp</string>
 	</array>
 </dict>
 </plist>
