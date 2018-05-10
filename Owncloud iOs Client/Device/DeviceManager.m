@@ -93,7 +93,8 @@ static NSString * const KEY_CurrentDeviceId = @"currentDeviceIdentifier";
             options.udpEnabled = [config[@"udp_enabled"] boolValue];
             options.bootstrapNodes = bootstrapNodes;
 
-            elaCarrier = [ELACarrier getInstanceWithOptions:options delegate:self error:&error];
+            [ELACarrier initializeInstanceWithOptions:options delegate:self error:&error];
+            elaCarrier = [ELACarrier getInstance];
             initializerd = NO;
             if (elaCarrier == nil) {
                 DLog(@"Create ELACarrier instance failed: %@", error);
