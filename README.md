@@ -43,7 +43,7 @@ See details for elastos carrier in **https://github.com/elastos/Elastos.NET.Carr
 Before to run DittoBox on iOS, you need to have DittoBox server to connect with. About how to build and install ownCloud server and DittBox server, please refer to instructions in following repository:
 
 ```
-https://github.com:elastos/Elastos.DittoBox.Server.git
+https://github.com/elastos/Elastos.DittoBox.Server
 ```
 
 ## Run
