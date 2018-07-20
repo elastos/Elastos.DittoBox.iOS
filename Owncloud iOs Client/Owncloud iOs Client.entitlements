@@ -4,11 +4,11 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.org.elastos.iOSdittoBoxapp</string>
+		<string>group.org.elastos.ditto</string>
 	</array>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)group.org.elastos.iOSdittoBoxapp</string>
+		<string>$(AppIdentifierPrefix)group.org.elastos.ditto</string>
 	</array>
 </dict>
 </plist>
