@@ -56,7 +56,6 @@
 		1428F675178422AE0092F42A /* UploadsOfflineDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 1428F674178422AE0092F42A /* UploadsOfflineDto.m */; };
 		1428F678178422BE0092F42A /* UtilsDtos.m in Sources */ = {isa = PBXBuildFile; fileRef = 1428F677178422BE0092F42A /* UtilsDtos.m */; };
 		145EA7D117786FAC0087CDDB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 145EA7CA17786FAC0087CDDB /* Localizable.strings */; };
-		145EA7D217786FAC0087CDDB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 145EA7CC17786FAC0087CDDB /* InfoPlist.strings */; };
 		1467037519372ACC00087289 /* DownloadUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1467037419372ACC00087289 /* DownloadUtils.m */; };
 		1487F135177C2F08004A1A5A /* ManageAppSettingsDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 1487F134177C2F08004A1A5A /* ManageAppSettingsDB.m */; };
 		1487F138177C2F48004A1A5A /* ManageDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 1487F137177C2F48004A1A5A /* ManageDB.m */; };
@@ -404,6 +403,7 @@
 		40F2F6131C5A180700129F92 /* owncloudLogoFiles.png in Resources */ = {isa = PBXBuildFile; fileRef = 40F2F6121C5A180700129F92 /* owncloudLogoFiles.png */; };
 		40FE44EA1BA020E40021C13A /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D924DCBC1B973E88008B4BE7 /* libOCMock.a */; };
 		40FF874319F81396008B7C62 /* OCKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FF874219F81396008B7C62 /* OCKeychain.m */; };
+		4987CF63D5C5350B35DC6EE4 /* Pods_ownCloudExtApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384343759565C1C9FF5CBF83 /* Pods_ownCloudExtApp.framework */; };
 		590849EF1A0A7D6000D3E842 /* CustomCellFileAndDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 148DD5C0177850B100FB9977 /* CustomCellFileAndDirectory.m */; };
 		590849F01A0A7D6D00D3E842 /* CustomCellFileAndDirectory.xib in Resources */ = {isa = PBXBuildFile; fileRef = 148DD5C1177850B100FB9977 /* CustomCellFileAndDirectory.xib */; };
 		590849F11A0A811000D3E842 /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = EABF69091891379C00A2217C /* NSMutableArray+SWUtilityButtons.m */; };
@@ -633,8 +633,8 @@
 		59F123E51C89C1250094CF70 /* SWLongPressGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = EABF690D1891379C00A2217C /* SWLongPressGestureRecognizer.m */; };
 		59F123E61C89C14D0094CF70 /* SWUtilityButtonTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = EABF69111891379C00A2217C /* SWUtilityButtonTapGestureRecognizer.m */; };
 		59F470321C5F97BA005B6091 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59F470311C5F97BA005B6091 /* Launch Screen.storyboard */; };
+		5EDA1B31EE2CED0461C6B95D /* Pods_Owncloud_iOs_Client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21ED1572FCD3F7C504A336F2 /* Pods_Owncloud_iOs_Client.framework */; };
 		7008193E2054F0D800AF42E0 /* ElastosCarrier.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7008193D2054F0D800AF42E0 /* ElastosCarrier.plist */; };
-		700819492054F7E700AF42E0 /* ElastosCarrier.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 700819462054F78F00AF42E0 /* ElastosCarrier.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		70198561205CC00900EA3A39 /* forward@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7019855F205CC00800EA3A39 /* forward@2x.png */; };
 		70198564205CCE4F00EA3A39 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70198562205CCE4F00EA3A39 /* back@2x.png */; };
 		70198565205CCE4F00EA3A39 /* back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70198563205CCE4F00EA3A39 /* back@3x.png */; };
@@ -696,12 +696,15 @@
 		908A3C701D019EDD00A34FDB /* file_synchronizing_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9064143E1D005B5C000AEFE5 /* file_synchronizing_icon@2x.png */; };
 		90D608FA1C89844E0049CCE4 /* SortManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 905B3D3A1C8867AA00BCC93B /* SortManager.m */; };
 		90D608FC1C8984760049CCE4 /* SortManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 905B3D3A1C8867AA00BCC93B /* SortManager.m */; };
+		A6ADD228A72FE6BCD4EE2D3D /* Pods_Owncloud_iOs_ClientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8675EA6EE5DAD78E4826AE85 /* Pods_Owncloud_iOs_ClientTests.framework */; };
+		B7CFA4CB8520A925527D9BD4 /* Pods_ownCloudExtAppFileProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4271F0601433ECAF7CAEAEB /* Pods_ownCloudExtAppFileProvider.framework */; };
 		BC7765951EDD7C1500E32D89 /* PresentedViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7765941EDD7C1500E32D89 /* PresentedViewUtils.m */; };
 		BC855ACD1E0D4B0200998CB7 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BC855ACA1E0D4B0200998CB7 /* FLAnimatedImage.m */; };
 		BC855ACE1E0D4B0200998CB7 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC855ACC1E0D4B0200998CB7 /* FLAnimatedImageView.m */; };
 		CB238ACB1E52FC2A006A03FA /* MediaAVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB238ACA1E52FC2A006A03FA /* MediaAVPlayerViewController.m */; };
 		CB238ACD1E52FCA4006A03FA /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB238ACC1E52FCA4006A03FA /* AVKit.framework */; };
 		CB6ABBC21E4CA0C000F27940 /* OCURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A6B65619458F6E000B107D /* OCURLSessionManager.m */; };
+		D28FAEA896C25B47D423B0E9 /* Pods_OC_Share_Sheet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4351A2FD18A00CADA10373C /* Pods_OC_Share_Sheet.framework */; };
 		EA0599851BB92B19002C2864 /* ShareUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0599831BB92B19002C2864 /* ShareUserCell.swift */; };
 		EA0599861BB92B19002C2864 /* ShareUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0599841BB92B19002C2864 /* ShareUserCell.xib */; };
 		EA0599931BB94F3F002C2864 /* ShareSearchUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0599911BB94F3F002C2864 /* ShareSearchUserViewController.m */; };
@@ -991,27 +994,6 @@
 			remoteGlobalIDString = EA7CC896183E11E600B6A4B4;
 			remoteInfo = "ownCloud iOS library";
 		};
-		700819452054F78F00AF42E0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 700819402054F78F00AF42E0 /* ElastosCarrier.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A3B497B72003736200420421;
-			remoteInfo = ElastosCarrier;
-		};
-		700819472054F78F00AF42E0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 700819402054F78F00AF42E0 /* ElastosCarrier.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A3B497C02003736300420421;
-			remoteInfo = ElastosCarrierTests;
-		};
-		70198573205D389B00EA3A39 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 700819402054F78F00AF42E0 /* ElastosCarrier.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = A3B497B62003736200420421;
-			remoteInfo = ElastosCarrier;
-		};
 		EA1F62DB1A5EC07E00D6346F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EA8667DB18AA291C00D3550D /* ownCloud iOS library.xcodeproj */;
@@ -1091,7 +1073,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				700819492054F7E700AF42E0 /* ElastosCarrier.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1174,7 +1155,6 @@
 		1428F677178422BE0092F42A /* UtilsDtos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UtilsDtos.m; path = Utils/UtilsDtos.m; sourceTree = "<group>"; };
 		142ABE5918BB610D00DDE6CE /* fr */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		145EA7CB17786FAC0087CDDB /* de */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
-		145EA7CD17786FAC0087CDDB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		145EA7CE17786FAC0087CDDB /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		145EA7CF17786FAC0087CDDB /* es */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1467037319372ACC00087289 /* DownloadUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DownloadUtils.h; path = Utils/DownloadUtils.h; sourceTree = "<group>"; };
@@ -1449,6 +1429,10 @@
 		14EC1954195B297F00B02AB6 /* sharedItem@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharedItem@2x.png"; sourceTree = "<group>"; };
 		14EFCAEA17FAFEAA007A38B6 /* MainAppIcon_76-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MainAppIcon_76-76.png"; sourceTree = "<group>"; };
 		14EFCAEC17FAFF48007A38B6 /* MainAppIcon_40-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MainAppIcon_40-40.png"; sourceTree = "<group>"; };
+		1A231B9266015FBC6E9DE214 /* Pods-Owncloud iOs ClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Owncloud iOs ClientTests.debug.xcconfig"; path = "Target Support Files/Pods-Owncloud iOs ClientTests/Pods-Owncloud iOs ClientTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1D0D9A92DED4F158F3312C24 /* Pods-ownCloudExtApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ownCloudExtApp.debug.xcconfig"; path = "Target Support Files/Pods-ownCloudExtApp/Pods-ownCloudExtApp.debug.xcconfig"; sourceTree = "<group>"; };
+		21ED1572FCD3F7C504A336F2 /* Pods_Owncloud_iOs_Client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Owncloud_iOs_Client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		384343759565C1C9FF5CBF83 /* Pods_ownCloudExtApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ownCloudExtApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4002B01A1D421A7100520FB3 /* sq */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sq; path = sq.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4002B01C1D421A8300520FB3 /* sl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sl; path = sl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		400560741A03B1190030D502 /* MainAppIcon_40-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MainAppIcon_40-40@2x.png"; sourceTree = "<group>"; };
@@ -1635,6 +1619,7 @@
 		40F2F6121C5A180700129F92 /* owncloudLogoFiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = owncloudLogoFiles.png; sourceTree = "<group>"; };
 		40FF874119F81396008B7C62 /* OCKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCKeychain.h; sourceTree = "<group>"; };
 		40FF874219F81396008B7C62 /* OCKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCKeychain.m; sourceTree = "<group>"; };
+		4DD229599ECDDCAAA0801279 /* Pods-ownCloudExtAppFileProvider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ownCloudExtAppFileProvider.debug.xcconfig"; path = "Target Support Files/Pods-ownCloudExtAppFileProvider/Pods-ownCloudExtAppFileProvider.debug.xcconfig"; sourceTree = "<group>"; };
 		590F1FF91C7474AE00AAF1C7 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Localizable.strings; sourceTree = "<group>"; };
 		590F1FFA1C7474B700AAF1C7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		593D14881C60BE1E005161E2 /* SplashImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashImage.png; sourceTree = "<group>"; };
@@ -1772,8 +1757,8 @@
 		59EF1F0C1CE0BD8900184F8F /* DeleteUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeleteUtils.h; path = Utils/DeleteUtils.h; sourceTree = "<group>"; };
 		59EF1F0D1CE0BD8900184F8F /* DeleteUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeleteUtils.m; path = Utils/DeleteUtils.m; sourceTree = "<group>"; };
 		59F470311C5F97BA005B6091 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		5DED5EE7257B0E19B1057A5E /* Pods-OC Share Sheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OC Share Sheet.release.xcconfig"; path = "Target Support Files/Pods-OC Share Sheet/Pods-OC Share Sheet.release.xcconfig"; sourceTree = "<group>"; };
 		7008193D2054F0D800AF42E0 /* ElastosCarrier.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ElastosCarrier.plist; sourceTree = "<group>"; };
-		700819402054F78F00AF42E0 /* ElastosCarrier.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ElastosCarrier.xcodeproj; path = ../Elastos.NET.Carrier.iOS.SDK/ElastosCarrier.xcodeproj; sourceTree = "<group>"; };
 		7019855F205CC00800EA3A39 /* forward@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forward@2x.png"; sourceTree = "<group>"; };
 		70198562205CCE4F00EA3A39 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
 		70198563205CCE4F00EA3A39 /* back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@3x.png"; sourceTree = "<group>"; };
@@ -1806,6 +1791,9 @@
 		708CC6AC2052F93100573DE6 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
 		7F9B91BC1F1F472700B77260 /* ServerURLNormalizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerURLNormalizer.swift; sourceTree = "<group>"; };
 		7F9B91C71F1F817700B77260 /* GetPublicInfoFromServerJob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPublicInfoFromServerJob.swift; sourceTree = "<group>"; };
+		8653CE832DDDD7F349990083 /* Pods-OC Share Sheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OC Share Sheet.debug.xcconfig"; path = "Target Support Files/Pods-OC Share Sheet/Pods-OC Share Sheet.debug.xcconfig"; sourceTree = "<group>"; };
+		8675EA6EE5DAD78E4826AE85 /* Pods_Owncloud_iOs_ClientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Owncloud_iOs_ClientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F3CC90D63EF6FB9A5BD0209 /* Pods-ownCloudExtApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ownCloudExtApp.release.xcconfig"; path = "Target Support Files/Pods-ownCloudExtApp/Pods-ownCloudExtApp.release.xcconfig"; sourceTree = "<group>"; };
 		905B3D3A1C8867AA00BCC93B /* SortManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SortManager.m; path = Tabs/FileTab/Sort/SortManager.m; sourceTree = "<group>"; };
 		905B3D3E1C88681000BCC93B /* SortManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SortManager.h; path = Tabs/FileTab/Sort/SortManager.h; sourceTree = "<group>"; };
 		906177E11C4FABF600BBE648 /* ManageTouchID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageTouchID.m; sourceTree = "<group>"; };
@@ -1826,6 +1814,8 @@
 		9069EAA61CF5F07200810996 /* OCLoadingSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OCLoadingSpinner.m; path = Utils/OCLoadingSpinner.m; sourceTree = "<group>"; };
 		908A3C5A1D016FE500A34FDB /* file_available_offline_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "file_available_offline_icon@2x.png"; sourceTree = "<group>"; };
 		908A3C5C1D01732C00A34FDB /* file_available_offline_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = file_available_offline_icon.png; sourceTree = "<group>"; };
+		A5992754FA3286F04BB49634 /* Pods-Owncloud iOs ClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Owncloud iOs ClientTests.release.xcconfig"; path = "Target Support Files/Pods-Owncloud iOs ClientTests/Pods-Owncloud iOs ClientTests.release.xcconfig"; sourceTree = "<group>"; };
+		B679D5AE1D3052B4CE4D1782 /* Pods-Owncloud iOs Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Owncloud iOs Client.release.xcconfig"; path = "Target Support Files/Pods-Owncloud iOs Client/Pods-Owncloud iOs Client.release.xcconfig"; sourceTree = "<group>"; };
 		BC7765931EDD7C1500E32D89 /* PresentedViewUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PresentedViewUtils.h; path = Utils/PresentedViewUtils.h; sourceTree = "<group>"; };
 		BC7765941EDD7C1500E32D89 /* PresentedViewUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PresentedViewUtils.m; path = Utils/PresentedViewUtils.m; sourceTree = "<group>"; };
 		BC855AC91E0D4B0200998CB7 /* FLAnimatedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FLAnimatedImage.h; path = ExternalLibreries/FLAnimatedimage/FLAnimatedImage.h; sourceTree = "<group>"; };
@@ -1835,6 +1825,7 @@
 		CB238AC91E52FC2A006A03FA /* MediaAVPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MediaAVPlayerViewController.h; path = Files/PreviewSupportedFiles/Media/MediaAVPlayerViewController.h; sourceTree = "<group>"; };
 		CB238ACA1E52FC2A006A03FA /* MediaAVPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MediaAVPlayerViewController.m; path = Files/PreviewSupportedFiles/Media/MediaAVPlayerViewController.m; sourceTree = "<group>"; };
 		CB238ACC1E52FCA4006A03FA /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		D4271F0601433ECAF7CAEAEB /* Pods_ownCloudExtAppFileProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ownCloudExtAppFileProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D924DCBC1B973E88008B4BE7 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
 		D924DCBE1B973E98008B4BE7 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
 		D924DCBF1B973E98008B4BE7 /* OCMArg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
@@ -2008,6 +1999,7 @@
 		EAD281BA1A38A2F900A00D54 /* DPDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPDownload.m; path = Network/DPDownload.m; sourceTree = "<group>"; };
 		EAD774F11AD2B01E0007C4DB /* OCSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCSplitViewController.h; sourceTree = "<group>"; };
 		EAD774F21AD2B01E0007C4DB /* OCSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCSplitViewController.m; sourceTree = "<group>"; };
+		EADBD7AD251B7936EF4B37E0 /* Pods-Owncloud iOs Client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Owncloud iOs Client.debug.xcconfig"; path = "Target Support Files/Pods-Owncloud iOs Client/Pods-Owncloud iOs Client.debug.xcconfig"; sourceTree = "<group>"; };
 		EAE005F0180EF03E0066E8D4 /* CheckSSOServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckSSOServer.h; sourceTree = "<group>"; };
 		EAEE0830192B35CC00E1AA25 /* SystemConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SystemConstants.h; path = Utils/SystemConstants.h; sourceTree = "<group>"; };
 		EAF13F7B1BE8F5EA00F87E9F /* CheckCapabilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CheckCapabilities.h; path = "Network/Server Version Checks/CheckCapabilities.h"; sourceTree = "<group>"; };
@@ -2020,6 +2012,8 @@
 		EAF7712B1B7340C400ED6E6E /* ShareLinkButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ShareLinkButtonCell.xib; path = Tabs/FileTab/Share/Cells/ShareLinkButtonCell.xib; sourceTree = "<group>"; };
 		EAF771301B73523800ED6E6E /* SystemConstants-swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SystemConstants-swift.swift"; path = "Utils/SystemConstants-swift.swift"; sourceTree = "<group>"; };
 		EAFE20A71AC4617D00BB888E /* UIImage+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
+		F4351A2FD18A00CADA10373C /* Pods_OC_Share_Sheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OC_Share_Sheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9C8682F4D64300716C23700 /* Pods-ownCloudExtAppFileProvider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ownCloudExtAppFileProvider.release.xcconfig"; path = "Target Support Files/Pods-ownCloudExtAppFileProvider/Pods-ownCloudExtAppFileProvider.release.xcconfig"; sourceTree = "<group>"; };
 		FCE228CF1CFE08EF00E4827F /* InstantUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstantUpload.h; sourceTree = "<group>"; };
 		FCE228D01CFE08EF00E4827F /* InstantUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstantUpload.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -2053,6 +2047,7 @@
 				1324298115ADBB3700DF823E /* CoreGraphics.framework in Frameworks */,
 				13824C0A16034C2200A95EAD /* libcrypto.a in Frameworks */,
 				13824C0B16034C2200A95EAD /* libssl.a in Frameworks */,
+				5EDA1B31EE2CED0461C6B95D /* Pods_Owncloud_iOs_Client.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2063,6 +2058,7 @@
 				40FE44EA1BA020E40021C13A /* libOCMock.a in Frameworks */,
 				132429B015ADBB3800DF823E /* UIKit.framework in Frameworks */,
 				132429B115ADBB3800DF823E /* Foundation.framework in Frameworks */,
+				A6ADD228A72FE6BCD4EE2D3D /* Pods_Owncloud_iOs_ClientTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2074,6 +2070,7 @@
 				EAC6E5F41AB0911600CCF8C4 /* libssl.a in Frameworks */,
 				EAF7217A1AAF1B33009F5596 /* libsqlite3.0.dylib in Frameworks */,
 				EAF721791AAF1AEF009F5596 /* libownCloudiOS.a in Frameworks */,
+				D28FAEA896C25B47D423B0E9 /* Pods_OC_Share_Sheet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2086,6 +2083,7 @@
 				59D700FC1A122BB6006DB0B7 /* MobileCoreServices.framework in Frameworks */,
 				599D99F41A025733008A9DB3 /* libsqlite3.0.dylib in Frameworks */,
 				597A87981A0143000071F2AF /* libownCloudiOS.a in Frameworks */,
+				4987CF63D5C5350B35DC6EE4 /* Pods_ownCloudExtApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2098,6 +2096,7 @@
 				59E58B761B04ED15004E9739 /* libssl.a in Frameworks */,
 				EA1F62DD1A5EC08300D6346F /* libownCloudiOS.a in Frameworks */,
 				EA1F62D61A5EBDF900D6346F /* libsqlite3.0.dylib in Frameworks */,
+				B7CFA4CB8520A925527D9BD4 /* Pods_ownCloudExtAppFileProvider.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2117,7 +2116,6 @@
 		1324296D15ADBB3700DF823E = {
 			isa = PBXGroup;
 			children = (
-				700819402054F78F00AF42E0 /* ElastosCarrier.xcodeproj */,
 				EA8667DB18AA291C00D3550D /* ownCloud iOS library.xcodeproj */,
 				1324298215ADBB3700DF823E /* Owncloud iOs Client */,
 				132429B415ADBB3800DF823E /* Owncloud iOs ClientTests */,
@@ -2126,6 +2124,7 @@
 				EA6606961AA767F800BA2C65 /* OC Share Sheet */,
 				1324297B15ADBB3700DF823E /* Frameworks */,
 				1324297915ADBB3700DF823E /* Products */,
+				1A314FE750FDB24DA136C4DE /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2167,6 +2166,11 @@
 				1324298015ADBB3700DF823E /* CoreGraphics.framework */,
 				13B721EC169D78BE00B24A51 /* Twitter.framework */,
 				13D8741E169DBE05000FBE6D /* MessageUI.framework */,
+				F4351A2FD18A00CADA10373C /* Pods_OC_Share_Sheet.framework */,
+				21ED1572FCD3F7C504A336F2 /* Pods_Owncloud_iOs_Client.framework */,
+				8675EA6EE5DAD78E4826AE85 /* Pods_Owncloud_iOs_ClientTests.framework */,
+				384343759565C1C9FF5CBF83 /* Pods_ownCloudExtApp.framework */,
+				D4271F0601433ECAF7CAEAEB /* Pods_ownCloudExtAppFileProvider.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2593,7 +2597,6 @@
 			isa = PBXGroup;
 			children = (
 				145EA7CA17786FAC0087CDDB /* Localizable.strings */,
-				145EA7CC17786FAC0087CDDB /* InfoPlist.strings */,
 			);
 			name = Languages;
 			path = SupportingFiles/Languages;
@@ -3098,6 +3101,23 @@
 			name = EmptyCell;
 			sourceTree = "<group>";
 		};
+		1A314FE750FDB24DA136C4DE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8653CE832DDDD7F349990083 /* Pods-OC Share Sheet.debug.xcconfig */,
+				5DED5EE7257B0E19B1057A5E /* Pods-OC Share Sheet.release.xcconfig */,
+				EADBD7AD251B7936EF4B37E0 /* Pods-Owncloud iOs Client.debug.xcconfig */,
+				B679D5AE1D3052B4CE4D1782 /* Pods-Owncloud iOs Client.release.xcconfig */,
+				1A231B9266015FBC6E9DE214 /* Pods-Owncloud iOs ClientTests.debug.xcconfig */,
+				A5992754FA3286F04BB49634 /* Pods-Owncloud iOs ClientTests.release.xcconfig */,
+				1D0D9A92DED4F158F3312C24 /* Pods-ownCloudExtApp.debug.xcconfig */,
+				8F3CC90D63EF6FB9A5BD0209 /* Pods-ownCloudExtApp.release.xcconfig */,
+				4DD229599ECDDCAAA0801279 /* Pods-ownCloudExtAppFileProvider.debug.xcconfig */,
+				F9C8682F4D64300716C23700 /* Pods-ownCloudExtAppFileProvider.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		400A63251B4FD2C100890579 /* HelpGuide */ = {
 			isa = PBXGroup;
 			children = (
@@ -3458,15 +3478,6 @@
 			);
 			name = SplashScreen;
 			path = ImageBranding/SplashScreen;
-			sourceTree = "<group>";
-		};
-		700819412054F78F00AF42E0 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				700819462054F78F00AF42E0 /* ElastosCarrier.framework */,
-				700819482054F78F00AF42E0 /* ElastosCarrierTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		708CC66F2052F3C700573DE6 /* Device */ = {
@@ -4040,17 +4051,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 132429BF15ADBB3800DF823E /* Build configuration list for PBXNativeTarget "Owncloud iOs Client" */;
 			buildPhases = (
+				3351F3B4A1C65A158C46EA0A /* [CP] Check Pods Manifest.lock */,
 				1324297415ADBB3700DF823E /* Sources */,
 				1324297515ADBB3700DF823E /* Frameworks */,
 				1324297615ADBB3700DF823E /* Resources */,
 				EAB0AB5919ED356A00764C31 /* Embed App Extensions */,
 				4074F2AF1C5782860029AAFE /* ShellScript */,
 				708CC6A62052F64500573DE6 /* Embed Frameworks */,
+				5131DA32778F37A805D249BC /* [CP] Embed Pods Frameworks */,
+				2746EEDA2244F89F00D66C9A /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				70198574205D389B00EA3A39 /* PBXTargetDependency */,
 				EA8667E618AA297F00D3550D /* PBXTargetDependency */,
 				EAB0AB4919ED356A00764C31 /* PBXTargetDependency */,
 				EAB0AB4C19ED356A00764C31 /* PBXTargetDependency */,
@@ -4067,6 +4080,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 132429C215ADBB3800DF823E /* Build configuration list for PBXNativeTarget "Owncloud iOs ClientTests" */;
 			buildPhases = (
+				0EAADD88C07ED5494D644638 /* [CP] Check Pods Manifest.lock */,
 				132429A815ADBB3800DF823E /* Sources */,
 				132429A915ADBB3800DF823E /* Frameworks */,
 				132429AA15ADBB3800DF823E /* Resources */,
@@ -4086,6 +4100,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA6606A31AA767F800BA2C65 /* Build configuration list for PBXNativeTarget "OC Share Sheet" */;
 			buildPhases = (
+				230C1244C0D6DE9A533650CC /* [CP] Check Pods Manifest.lock */,
 				EA6606911AA767F700BA2C65 /* Sources */,
 				EA6606921AA767F700BA2C65 /* Frameworks */,
 				EA6606931AA767F700BA2C65 /* Resources */,
@@ -4104,6 +4119,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAB0AB5819ED356A00764C31 /* Build configuration list for PBXNativeTarget "ownCloudExtApp" */;
 			buildPhases = (
+				F10E3B004C559EED42E6E741 /* [CP] Check Pods Manifest.lock */,
 				EAB0AB2E19ED356A00764C31 /* Sources */,
 				EAB0AB2F19ED356A00764C31 /* Frameworks */,
 				EAB0AB3019ED356A00764C31 /* Resources */,
@@ -4122,6 +4138,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAB0AB5719ED356A00764C31 /* Build configuration list for PBXNativeTarget "ownCloudExtAppFileProvider" */;
 			buildPhases = (
+				60F8BE748C4970A6AE58056C /* [CP] Check Pods Manifest.lock */,
 				EAB0AB3C19ED356A00764C31 /* Sources */,
 				EAB0AB3D19ED356A00764C31 /* Frameworks */,
 				EAB0AB3E19ED356A00764C31 /* Resources */,
@@ -4242,10 +4259,6 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 700819412054F78F00AF42E0 /* Products */;
-					ProjectRef = 700819402054F78F00AF42E0 /* ElastosCarrier.xcodeproj */;
-				},
-				{
 					ProductGroup = EA8667DC18AA291C00D3550D /* Products */;
 					ProjectRef = EA8667DB18AA291C00D3550D /* ownCloud iOS library.xcodeproj */;
 				},
@@ -4262,20 +4275,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		700819462054F78F00AF42E0 /* ElastosCarrier.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ElastosCarrier.framework;
-			remoteRef = 700819452054F78F00AF42E0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		700819482054F78F00AF42E0 /* ElastosCarrierTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ElastosCarrierTests.xctest;
-			remoteRef = 700819472054F78F00AF42E0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		EA8667E118AA291C00D3550D /* libownCloudiOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -4350,7 +4349,6 @@
 				145EA7D117786FAC0087CDDB /* Localizable.strings in Resources */,
 				59EDC4201C611D6C0050939C /* iphoneFiles@2x.png in Resources */,
 				13A5ADB418883C77000EB617 /* CopyLinkShareipad@2x.png in Resources */,
-				145EA7D217786FAC0087CDDB /* InfoPlist.strings in Resources */,
 				1487F203177C35AA004A1A5A /* CompanyLogo.png in Resources */,
 				1487F204177C35AA004A1A5A /* CompanyLogo@2x.png in Resources */,
 				14A87ADF1933390900D0D5AD /* FileDownloadingIcon.png in Resources */,
@@ -4880,6 +4878,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0EAADD88C07ED5494D644638 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Owncloud iOs ClientTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		132429AB15ADBB3800DF823E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -4893,6 +4913,67 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n#\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		230C1244C0D6DE9A533650CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OC Share Sheet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2746EEDA2244F89F00D66C9A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/ElastosCarrierSDK/ElastosCarrier-framework/CocoaPods/codesigncarrierframework.sh\"\n";
+		};
+		3351F3B4A1C65A158C46EA0A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Owncloud iOs Client-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4074F2AF1C5782860029AAFE /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -4905,6 +4986,72 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "LASTGITCOMMIT=$(git rev-parse --short HEAD)\ndefaults write \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH%.*}\" \"LastGitCommit\" \"${LASTGITCOMMIT}\"\n";
+		};
+		5131DA32778F37A805D249BC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Owncloud iOs Client/Pods-Owncloud iOs Client-frameworks.sh",
+				"${PODS_ROOT}/ElastosCarrierSDK/ElastosCarrier-framework/ElastosCarrier.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ElastosCarrier.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Owncloud iOs Client/Pods-Owncloud iOs Client-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60F8BE748C4970A6AE58056C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ownCloudExtAppFileProvider-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F10E3B004C559EED42E6E741 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ownCloudExtApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -5330,11 +5477,6 @@
 			name = "ownCloud iOS library";
 			targetProxy = 597A87961A013FD50071F2AF /* PBXContainerItemProxy */;
 		};
-		70198574205D389B00EA3A39 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ElastosCarrier;
-			targetProxy = 70198573205D389B00EA3A39 /* PBXContainerItemProxy */;
-		};
 		EA1F62DC1A5EC07E00D6346F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "ownCloud iOS library";
@@ -5418,14 +5560,6 @@
 				404BA7E61D49F4EB00A716C7 /* zh-Hant */,
 			);
 			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		145EA7CC17786FAC0087CDDB /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				145EA7CD17786FAC0087CDDB /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 		40A1F1801D8857740078C901 /* InfoPlist.strings */ = {
@@ -5512,6 +5646,7 @@
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s x86_64";
 			};
 			name = Debug;
 		};
@@ -5555,11 +5690,13 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s x86_64";
 			};
 			name = Release;
 		};
 		132429C015ADBB3800DF823E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EADBD7AD251B7936EF4B37E0 /* Pods-Owncloud iOs Client.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -5607,13 +5744,14 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Owncloud iOs Client/Owncloud iOS Client-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
-				VALID_ARCHS = "armv7 armv7s arm64";
+				VALID_ARCHS = "armv7 armv7s arm64 x86_64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		132429C115ADBB3800DF823E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B679D5AE1D3052B4CE4D1782 /* Pods-Owncloud iOs Client.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -5655,13 +5793,14 @@
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Owncloud iOs Client/Owncloud iOS Client-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
-				VALID_ARCHS = "armv7 armv7s arm64";
+				VALID_ARCHS = "armv7 armv7s arm64 x86_64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
 		132429C315ADBB3800DF823E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A231B9266015FBC6E9DE214 /* Pods-Owncloud iOs ClientTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Owncloud iOs Client.app/Owncloud iOs Client";
 				DEVELOPMENT_TEAM = LFU7T9UYL5;
@@ -5693,6 +5832,7 @@
 		};
 		132429C415ADBB3800DF823E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5992754FA3286F04BB49634 /* Pods-Owncloud iOs ClientTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Owncloud iOs Client.app/Owncloud iOs Client";
 				DEVELOPMENT_TEAM = LFU7T9UYL5;
@@ -5724,6 +5864,7 @@
 		};
 		EA6606A01AA767F800BA2C65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8653CE832DDDD7F349990083 /* Pods-OC Share Sheet.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -5775,6 +5916,7 @@
 		};
 		EA6606A11AA767F800BA2C65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DED5EE7257B0E19B1057A5E /* Pods-OC Share Sheet.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -5822,6 +5964,7 @@
 		};
 		EAB0AB5219ED356A00764C31 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D0D9A92DED4F158F3312C24 /* Pods-ownCloudExtApp.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -5888,6 +6031,7 @@
 		};
 		EAB0AB5319ED356A00764C31 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F3CC90D63EF6FB9A5BD0209 /* Pods-ownCloudExtApp.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -5949,6 +6093,7 @@
 		};
 		EAB0AB5419ED356A00764C31 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DD229599ECDDCAAA0801279 /* Pods-ownCloudExtAppFileProvider.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -6007,6 +6152,7 @@
 		};
 		EAB0AB5519ED356A00764C31 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9C8682F4D64300716C23700 /* Pods-ownCloudExtAppFileProvider.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";

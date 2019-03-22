@@ -93,8 +93,8 @@ static NSString * const KEY_CurrentDeviceId = @"currentDeviceIdentifier";
             options.udpEnabled = [config[@"udp_enabled"] boolValue];
             options.bootstrapNodes = bootstrapNodes;
 
-            [ELACarrier initializeInstanceWithOptions:options delegate:self error:&error];
-            elaCarrier = [ELACarrier getInstance];
+            [ELACarrier initializeSharedInstance:options delegate:self error:&error];
+            elaCarrier = [ELACarrier sharedInstance];
             initializerd = NO;
             if (elaCarrier == nil) {
                 DLog(@"Create ELACarrier instance failed: %@", error);
@@ -106,7 +106,7 @@ static NSString * const KEY_CurrentDeviceId = @"currentDeviceIdentifier";
             }
         }
 
-        initializerd = [elaCarrier startWithIterateInterval:1000 error:&error];
+        initializerd = [elaCarrier start:1000 error:&error];
         if (initializerd) {
             devices = [[NSMutableArray alloc] init];
         }
@@ -141,7 +141,7 @@ static NSString * const KEY_CurrentDeviceId = @"currentDeviceIdentifier";
     devices = nil;
     currentDevice = nil;
 
-    [[ELACarrierSessionManager getInstance] cleanup];
+    [[ELACarrierSessionManager sharedInstance] cleanup];
     [elaCarrier kill];
     elaCarrier = nil;
 
@@ -254,7 +254,7 @@ static NSString * const KEY_CurrentDeviceId = @"currentDeviceIdentifier";
         [carrier setSelfUserInfo:selfInfo error:nil];
     }
 
-    [ELACarrierSessionManager getInstance:carrier error:nil];
+    [ELACarrierSessionManager initializeSharedInstance:carrier error:nil];
     [self.currentDevice connect];
 }
 
