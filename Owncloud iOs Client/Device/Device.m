@@ -69,13 +69,13 @@ static NSString * const KEY_LocalPort = @"localPort";
     }
 
     if (_session == nil) {
-        ELACarrierSessionManager *sessionManager = [ELACarrierSessionManager getInstance];
+        ELACarrierSessionManager *sessionManager = [ELACarrierSessionManager sharedInstance];
         if (sessionManager == nil) {
             return NO;
         }
 
         NSError *error = nil;
-        _session = [sessionManager newSessionTo:self.deviceId error:&error];
+        _session = [sessionManager createSession:self.deviceId error:&error];
         if (_session == nil) {
             DLog(@"Create session error: %@", error);
             [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationDeviceConnectFailed object:self userInfo:@{@"error": error}];
@@ -181,7 +181,7 @@ static NSString * const KEY_LocalPort = @"localPort";
 
               if (status == 0) {
                   NSError *error = nil;
-                  if (![session startWithRemoteSdp:sdp error:&error]) {
+                  if (![session startremoteSdp:sdp error:&error]) {
                       DLog(@"Start session error: %@", error);
                       [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationDeviceConnectFailed object:self userInfo:@{@"error": error}];
                   }
