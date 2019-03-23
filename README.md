@@ -7,9 +7,9 @@ DittBox is a demo application integrating ownCloud over elastos carrier network,
 
 ## Highlights
 
-This app demonstrates that all traditional http(/https)-based application can be refactored to elastos carrier apps running over carrier network. Being elastos carrier web app, the app server can be deployed without requirement of direct network accessibiblity.
+This app demonstrates that all traditional http(/https)-based applications can be refactored to elastos apps running over carrier network. Being elastos carrier web app, the app server can be deployed without requirement of direct accessibility over carrier network.
 
-For example, through elastos carrier network, you can deploy ownCloud server in local network at your home, and access ownCloud service at anywhere.
+For example, over elastos carrier network, you can deploy ownCloud server in local network at your home, and access ownCloud service at anywhere.
 
 ## Build from source
 
@@ -26,7 +26,7 @@ $ git clone git@github.com:elastos/Elastos.DittoBox.iOS.git
 $ git submoudle update --init --recursive
 ```
 
-Then open this project with Xcode to build distribution.
+Then use **pod install** before open this project with Xcode to build distribution.
 
 ## Dependencies
 
@@ -36,7 +36,7 @@ See details for ownCloud in **README.ownCloud.md**.
 
 ### 2. Elastos Carrier
 
-See details for elastos carrier in **https://github.com/elastos/Elastos.NET.Carrier.iOS.SDK**, and build **ElastosCarrier.framework** with instructions.
+See details for elastos carrier in **https://github.com/elastos/Elastos.NET.Carrier.iOS.SDK**.
 
 ## Deployment
 
