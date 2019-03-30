@@ -718,7 +718,7 @@ public enum TextfieldType: String {
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         if self.authMethodToLogin != nil && self.authMethodToLogin == .BASIC_HTTP_AUTH {
-            if (self.textFieldUsername.text!.characters.count > 0) && (self.textFieldPassword.text!.characters.count > 0) {
+            if (self.textFieldUsername.text!.count > 0) && (self.textFieldPassword.text!.count > 0) {
                 self.setConnectButton(status: true)
             } else {
                 self.setConnectButton(status: false)
@@ -734,7 +734,7 @@ public enum TextfieldType: String {
             self.textFieldPassword.becomeFirstResponder()
             break
         case TextfieldType.password.rawValue:
-            if (self.textFieldUsername.text?.characters.count)! > 0 {
+            if (self.textFieldUsername.text?.count)! > 0 {
                 self.setNetworkActivityIndicator(status: true)
                 self.setConnectButton(status: false)
                 startAuthenticationWith(authMethod: .BASIC_HTTP_AUTH)
@@ -875,7 +875,7 @@ public enum TextfieldType: String {
     @IBAction func editingChanged(_ sender: UITextField) {
         
         if self.textFieldUsername.text != ""{
-            self.setConnectButton(status: (sender.text?.characters.count)! > 0)
+            self.setConnectButton(status: (sender.text?.count)! > 0)
         }
     }
     

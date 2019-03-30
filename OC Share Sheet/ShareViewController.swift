@@ -149,7 +149,7 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
             nameFolder = appName
         }
 
-        if (nameFolder.characters.count > 20) {
+        if (nameFolder.count > 20) {
             let nameFolderNSString = nameFolder as NSString
             nameFolder = nameFolderNSString.substring(with: NSRange(location: 0, length: 20))
             nameFolder += "..."
@@ -220,7 +220,7 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
                 fileName = (url.path as NSString).lastPathComponent
                 if type == kindOfFileEnum.imageFileType.rawValue || type == kindOfFileEnum.videoFileType.rawValue {
                     
-                    if  urlOriginalPath != String(destinyMovedFilePath.characters.dropLast()) {
+                    if  urlOriginalPath != String(destinyMovedFilePath.dropLast()) {
                         fileName = FileNameUtils.getComposeName(fromPath: url.path)
                     }
                 }
