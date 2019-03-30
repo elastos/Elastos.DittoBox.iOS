@@ -176,13 +176,13 @@ public enum TextfieldType: String {
         }
     }
     
-    func deviceConnected(_ notification: Notification) {
+    @objc func deviceConnected(_ notification: Notification) {
         DispatchQueue.main.async {
             self.textFieldDidEndEditing(self.textFieldURL);
         }
     }
     
-    func deviceConnectFailed(_ notification: Notification) {
+    @objc func deviceConnectFailed(_ notification: Notification) {
         DispatchQueue.main.async {
             self.imageViewURLFooter.image = UIImage(named: "CredentialsError.png")!
             self.labelURLFooter.text = NSLocalizedString("error_too_many_http_redirects", comment: "")
@@ -449,7 +449,7 @@ public enum TextfieldType: String {
     
     func setCancelBarButtonSystemItem() {
         
-        let cancelButton = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.cancel,
+        let cancelButton = UIBarButtonItem(barButtonSystemItem:UIBarButtonItem.SystemItem.cancel,
                                            target:self,
                                            action:#selector(closeLoginView))
         
@@ -530,7 +530,7 @@ public enum TextfieldType: String {
     }
     
     // MARK: dismiss
-    func closeLoginView() {
+    @objc func closeLoginView() {
         self.setNetworkActivityIndicator(status: false)
         UtilsCookies.deleteCurrentSystemCookieStorageAndRestoreTheCookiesOfActiveUser()
         self.dismiss(animated: true, completion: nil)
@@ -760,7 +760,7 @@ public enum TextfieldType: String {
         view.addGestureRecognizer(tap)
     }
     
-    func dismissKeyboard() {
+    @objc func dismissKeyboard() {
         view.endEditing(true)
     }
     
@@ -768,17 +768,17 @@ public enum TextfieldType: String {
     //MARK: Keyboard Notifications
     
     func listenNotificationsAboutKeyboard () {
-        NotificationCenter.default.addObserver(self, selector: #selector(UniversalLoginViewController.keyboardDidShow(_:)), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(UniversalLoginViewController.keyboardWillBeHidden(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(UniversalLoginViewController.keyboardDidShow(_:)), name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(UniversalLoginViewController.keyboardWillBeHidden(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     func removeNotificationsAboutKeyboard () {
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardDidShow, object: nil)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    func keyboardDidShow(_ notification: Notification) {
-        if let activeField = self.activeField, let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+    @objc func keyboardDidShow(_ notification: Notification) {
+        if let activeField = self.activeField, let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardSize.height + 20, right: 0.0)
             self.scrollView.contentInset = contentInsets
             self.scrollView.scrollIndicatorInsets = contentInsets
@@ -790,7 +790,7 @@ public enum TextfieldType: String {
         }
     }
     
-    func keyboardWillBeHidden(_ notification: Notification) {
+    @objc func keyboardWillBeHidden(_ notification: Notification) {
         let contentInsets = UIEdgeInsets.zero
         self.scrollView.contentInset = contentInsets
         self.scrollView.scrollIndicatorInsets = contentInsets
@@ -1022,7 +1022,7 @@ public enum TextfieldType: String {
         // Dispose of any resources that can be recreated.
     }
     
-    func setLoginMode(loginMode: LoginMode, user: UserDto) {
+   @objc func setLoginMode(loginMode: LoginMode, user: UserDto) {
         self.loginMode = loginMode
         self.user = user
     }

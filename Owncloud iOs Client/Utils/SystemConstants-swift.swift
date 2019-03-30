@@ -17,7 +17,7 @@ import Foundation
 import UIKit
 
 let IS_IPHONE = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.phone
-let IS_PORTRAIT = UIInterfaceOrientationIsPortrait(UIApplication.shared.statusBarOrientation)
+let IS_PORTRAIT = UIApplication.shared.statusBarOrientation.isPortrait
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
 

@@ -16,7 +16,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/gpl-3.0.en.htm
 import Foundation
 
 extension UIImage {
-    public func resize(_ size:CGSize, completionHandler:@escaping (_ resizedImage:UIImage, _ data:Data)->()) {
+    @objc public func resize(_ size:CGSize, completionHandler:@escaping (_ resizedImage:UIImage, _ data:Data)->()) {
         DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated).async(execute: { () -> Void in
             let newSize:CGSize = size
             let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
@@ -24,7 +24,7 @@ extension UIImage {
             self.draw(in: rect)
             let newImage = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
-            let imageData = UIImageJPEGRepresentation(newImage!, 0.5)
+            let imageData = newImage!.jpegData(compressionQuality: 0.5)
             DispatchQueue.main.async(execute: { () -> Void in
                 completionHandler(newImage!, imageData!)
             })
