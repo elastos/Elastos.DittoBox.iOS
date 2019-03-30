@@ -46,15 +46,15 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
     @IBOutlet weak var destinyFolderButton: UIBarButtonItem?
     @IBOutlet weak var constraintTopTableView: NSLayoutConstraint?
     
-    var filesSelected: [URL] = []
-    var images: [UIImage] = []
-    var currentRemotePath: String!
+    @objc var filesSelected: [URL] = []
+    @objc var images: [UIImage] = []
+    @objc var currentRemotePath: String!
    
-    let witdhFormSheet: CGFloat = 540.0
-    let heighFormSheet: CGFloat = 620.0
+    @objc let witdhFormSheet: CGFloat = 540.0
+    @objc let heighFormSheet: CGFloat = 620.0
     
-    let witdhImageSize: CGFloat = 150.0
-    let heighImageSize: CGFloat = 150.0
+    @objc let witdhImageSize: CGFloat = 150.0
+    @objc let heighImageSize: CGFloat = 150.0
     
     
     override func viewDidLoad() {
@@ -93,13 +93,13 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
         
     }
     
-    func showPasscode() {
+    @objc func showPasscode() {
         
         let passcodeView = KKPasscodeViewController(nibName: nil, bundle: nil)
         passcodeView.delegate = self
         passcodeView.mode = UInt(KKPasscodeModeEnter)
         
-        passcodeView.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: self, action: #selector(ShareViewController.cancelView))
+        passcodeView.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.cancel, target: self, action: #selector(ShareViewController.cancelView))
         
         let ocNavController = OCNavigationController(rootViewController: passcodeView)
         ocNavController.modalPresentationStyle = UIModalPresentationStyle.formSheet
@@ -111,7 +111,7 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
         
     }
     
-    func showShareIn() {
+    @objc func showShareIn() {
         
         self.createCustomInterface()
         
@@ -121,7 +121,7 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
         
     }
     
-    func createCustomInterface(){
+    @objc func createCustomInterface(){
         
         let rightBarButton = UIBarButtonItem (title:NSLocalizedString("upload_label", comment: ""), style: .plain, target: self, action:#selector(ShareViewController.uploadButtonTapped))
         let leftBarButton = UIBarButtonItem (title:NSLocalizedString("cancel", comment: ""), style: .plain, target: self, action:#selector(ShareViewController.cancelView))
@@ -140,7 +140,7 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 
     }
     
-    func changeTheDestinyFolderWith(_ folder: String){
+    @objc func changeTheDestinyFolderWith(_ folder: String){
         
         var nameFolder = folder
         let location = NSLocalizedString("location", comment: "comment")
@@ -162,14 +162,14 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
         self.destinyFolderButton?.title = destiny
     }
     
-    func cancelView() {
+    @objc func cancelView() {
        
         self.extensionContext?.completeRequest(returningItems: nil, completionHandler: nil)
         return
        
     }
     
-    func uploadButtonTapped() {
+    @objc func uploadButtonTapped() {
         
         let activeUser = ManageUsersDB.getActiveUser()
         
@@ -181,7 +181,7 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
             let appName = Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as! String
             title = title.replacingOccurrences(of: "$appname", with: appName)
             
-            let alert = UIAlertController(title: title, message: "", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: title, message: "", preferredStyle: UIAlertController.Style.alert)
             
             alert.addAction(UIAlertAction(title: NSLocalizedString("ok", comment: ""), style: .default, handler: { action in
                 self.sendTheFilesToOwnCloud()
@@ -195,7 +195,7 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
    
     }
     
-    func sendTheFilesToOwnCloud() {
+    @objc func sendTheFilesToOwnCloud() {
         
         print("sendTheFilesToOwnCloud")
         
@@ -323,7 +323,7 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
     }
     
     
-    func loadFiles() {
+    @objc func loadFiles() {
         
         if let inputItems : [NSExtensionItem] = self.extensionContext?.inputItems as? [NSExtensionItem] {
             for item : NSExtensionItem in inputItems {
@@ -398,7 +398,7 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
     }
     
     
-    func reloadListWithDelay(){
+    @objc func reloadListWithDelay(){
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(0.1 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)) { () -> Void in
             
@@ -411,7 +411,7 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
     }
     
     
-    func showFilesSelected (){
+    @objc func showFilesSelected (){
         
         
         if self.filesSelected.count > 0{
@@ -436,7 +436,7 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
                     let asset = AVURLAsset (url: url, options: nil)
                     let imageGenerator = AVAssetImageGenerator (asset: asset)
                     imageGenerator.appliesPreferredTrackTransform = true
-                    let time = CMTimeMakeWithSeconds(0.0, 600)
+                    let time = CMTimeMakeWithSeconds(0.0, preferredTimescale: 600)
                 
                     let imageRef: CGImage!
                     do {
@@ -492,7 +492,7 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
         let row = indexPath.row
         let url = self.filesSelected[row] as URL
         
-        cell.selectionStyle = UITableViewCellSelectionStyle.none
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
         
         //Choose the correct icon if the file is not an image
         let ext = FileNameUtils.getExtension(url.lastPathComponent)
@@ -546,7 +546,7 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
     
     //MARK: Select Folder Selected Delegate Methods
     
-    func folderSelected(_ folder: NSString){
+    @objc func folderSelected(_ folder: NSString){
         
         print("Folder selected \(folder)")
         
@@ -559,20 +559,20 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
         
     }
     
-    func cancelFolderSelected(){
+    @objc func cancelFolderSelected(){
         
         print("Cancel folder selected")
         
     }
     
-    func showErrorLoginView () {
+    @objc func showErrorLoginView () {
         let appName = Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String
         showAlertView((NSLocalizedString("error_login_doc_provider", comment: "") as NSString).replacingOccurrences(of: "$appname", with: appName!))
     }
     
-    func showAlertView(_ title: String) {
+    @objc func showAlertView(_ title: String) {
         
-        let alert = UIAlertController(title: title, message: "", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: title, message: "", preferredStyle: UIAlertController.Style.alert)
         
         alert.addAction(UIAlertAction(title: NSLocalizedString("ok", comment: ""), style: .default, handler: { action in
             switch action.style{
