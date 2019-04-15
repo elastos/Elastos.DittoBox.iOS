@@ -2,7 +2,7 @@
 #import "InputDeviceIDViewController.h"
 #import "AddDeviceViewController.h"
 #import "MBProgressHUD.h"
-#import <ElastosCarrier/ElastosCarrier.h>
+#import <ElastosCarrierSDK/ElastosCarrierSDK.h>
 
 @interface ScanViewController () <AVCaptureMetadataOutputObjectsDelegate>
 {

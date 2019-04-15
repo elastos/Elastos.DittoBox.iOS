@@ -2,7 +2,7 @@
 #import "InputDeviceIDViewController.h"
 #import "ImageUtils.h"
 #import "MBProgressHUD.h"
-#import <ElastosCarrier/ElastosCarrier.h>
+#import <ElastosCarrierSDK/ElastosCarrierSDK.h>
 
 @interface InputDeviceIDViewController()<UITextFieldDelegate>
 @property (nonatomic, strong) UIButton *commitButton;

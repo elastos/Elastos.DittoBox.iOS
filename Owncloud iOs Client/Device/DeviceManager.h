@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-#import <ElastosCarrier/ElastosCarrier.h>
+#import <ElastosCarrierSDK/ElastosCarrierSDK.h>
 #import "Device.h"
 
 #define kNotificationDeviceListUpdated      @"kNotificationDeviceListUpdated"

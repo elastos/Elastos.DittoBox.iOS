@@ -14,7 +14,7 @@ target 'Owncloud iOs Client' do
   use_frameworks!
 
   # Pods for Owncloud iOs Client
-   pod 'ElastosCarrierSDK'
+   pod 'ElastosCarrierSDK','5.2.4'
   target 'Owncloud iOs ClientTests' do
     inherit! :search_paths
     # Pods for testing
