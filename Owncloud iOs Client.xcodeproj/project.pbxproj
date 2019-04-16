@@ -4979,13 +4979,13 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Owncloud iOs Client/Pods-Owncloud iOs Client-frameworks.sh",
-				"${PODS_ROOT}/ElastosCarrierSDK/ElastosCarrier-framework/ElastosCarrier.framework",
+				"${PODS_ROOT}/ElastosCarrierSDK/ElastosCarrier-framework/ElastosCarrierSDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ElastosCarrier.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ElastosCarrierSDK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -5719,7 +5719,7 @@
 					"$(SRCROOT)",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = org.elastos.ditto;
+				PRODUCT_BUNDLE_IDENTIFIER = org.elastos.dittobox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -5729,7 +5729,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Owncloud iOs Client/Owncloud iOS Client-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				VALID_ARCHS = "armv7 armv7s arm64 x86_64";
+				VALID_ARCHS = "arm64 x86_64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -5769,7 +5769,7 @@
 					"$(SRCROOT)",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = org.elastos.ditto;
+				PRODUCT_BUNDLE_IDENTIFIER = org.elastos.dittobox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -5778,7 +5778,7 @@
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Owncloud iOs Client/Owncloud iOS Client-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				VALID_ARCHS = "armv7 armv7s arm64 x86_64";
+				VALID_ARCHS = "arm64 x86_64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
